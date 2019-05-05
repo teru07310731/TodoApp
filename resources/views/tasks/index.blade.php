@@ -5,7 +5,7 @@
 	<meta name="viewpoprt" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Todo App</title>
-	<link rel="stylesheet" type="/css/styles.css">
+	<link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 	<header>
@@ -17,22 +17,22 @@
 		<div class="container">
 			<div class="row">
 				<div class="col col-md-4">
-					<nav class="panel panel-default">
-						<div class="papnel-heading">Folder</div>
-							<div class="panel-body">
-								<a href="#" class="btn btn-default btn-block">
-									Add Folder
-								</a>
-							</div>
-							<div class="list-group">
-								@foreach($folders as $folder)
-									<a href="{{ route('tasks.index', ['id' => $folder->id]) }}" class="list-group-item">
-										{{ $folder->title }}
+						<nav class="panel panel-default">
+							<div class="papnel-heading">Folder</div>
+								<div class="panel-body">
+									<a href="#" class="btn btn-default btn-block">
+										Add Folder
 									</a>
-								@endforeach
+								</div>
+								<div class="list-group">
+									@foreach($folders as $folder)
+										<a href="{{ route('tasks.index', ['id' => $folder->id]) }}" class="list-group-item">
+											{{ $folder->title }}
+										</a>
+									@endforeach
+								</div>
 							</div>
 						</nav>
-					</div>
 					<div class="column col-md-8"></div>
 				</div>
 			</div>
